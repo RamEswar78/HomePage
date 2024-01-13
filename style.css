@@ -1,0 +1,121 @@
+@keyframes slideIn {
+    from{
+        right:-300px;
+    }
+    to{
+        right: 0;
+    }
+    
+}
+@keyframes slideOut {
+    from{
+        right:0px;
+    }
+    to{
+        right: -300px;
+    }
+    
+}
+::-webkit-scrollbar {
+    display: none;
+}
+body,html{
+    border: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: rgb(107, 106, 106);
+    overflow: hidden;
+}
+.header{
+    /* background:rgb(81, 50, 50); */
+    height: 50px;
+    display: flex;
+    padding-top: 10px;
+    flex-direction: row;
+}
+.Profile{
+    cursor: zoom-in;
+    background: url("Myimg.jpg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 40px;
+    height: 40px;
+    margin: 0 5px;
+    border-radius: 100%;
+    align-self: flex-start;
+    transition: transform 1s ease-in-out,border-radius 1s ease-in-out;
+}
+.Profile:hover{
+    box-shadow: 0 10px 35px rgb(50, 51, 50);
+    border-radius: 10px;
+    transform: translate3d(70px,55px,40px) scale(4);
+    cursor: pointer;
+}
+.social{
+    /* background: blue; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    /* align-self:flex-end; */
+}
+.icon{
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 0px;
+    box-shadow: 0 2px 0  gray;
+
+}
+.social img{
+    transform:rotateY(20deg);
+    transition: transform 2s ease-in-out;
+    height: 50px;
+    width: 50px;
+    padding: 0px;
+
+
+}
+.social img:hover{
+    transform:rotateY(200deg);
+}
+.container{
+    width: 300px;
+    color: white;
+    border: 1px double white;
+    padding: 7px;
+    background: black;
+    height: 85vh;
+    position: absolute;
+    right: -310px;
+    top: 70px;
+    overflow: scroll;
+    /* animation: slideIn 1s ease-in-out both; */
+}
+#close{
+    cursor: pointer;
+    width:10px;
+    /* background: white; */
+    color:black;
+    display: block;
+}
+
+.clock-con{
+    margin: 20px;
+    padding: 10px;
+    box-shadow: 2px 2px 20px gold;
+    border: 10px solid gray;
+    border-radius: 10px;
+    text-align: center;
+    background: gray;
+    color:white;
+    font-size: 50px;
+    font-family: 'Nunito', sans-serif;
+    width:300px
+}
+.date{
+    display: block;
+    font-size: 15px;
+
+}
